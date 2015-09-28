@@ -1,0 +1,11 @@
+{
+  "name": "npm-repository",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node_modules/sinopia/bin/sinopia -l 0.0.0.0:80"
+  },
+  "dependencies": {
+    "sinopia": "^1.4.0"
+  }
+}

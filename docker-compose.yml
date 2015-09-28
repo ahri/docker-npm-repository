@@ -1,0 +1,5 @@
+npm-repository:
+    restart: always
+    image: ahri/npm-repository:0.0.1
+    ports:
+        - 127.0.0.1:4873:4873
