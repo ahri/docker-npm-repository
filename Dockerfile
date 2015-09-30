@@ -11,4 +11,8 @@ RUN mkdir /home/nobody && \
     chown nobody:nogroup /home/nobody
 
 EXPOSE 4873
-ENTRYPOINT su -s "/bin/sh" -c "cd /home/nobody && /node_modules/sinopia/bin/sinopia -l 0.0.0.0:4873" nobody
+
+USER nobody
+WORKDIR /home/nobody
+
+ENTRYPOINT ["/node_modules/sinopia/bin/sinopia", "-l", "0.0.0.0:4873"]
